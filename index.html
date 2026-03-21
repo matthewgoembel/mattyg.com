@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Goembel — mattyg</title>
+    <meta name="description" content="Software Engineer, Prop Trader, and Founder of Hypewave AI.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">MG</a>
+            <ul class="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#work">work</a></li>
+                <li><a href="#trading">trading</a></li>
+                <li><a href="#connect">connect</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-tag">Palm Bay, FL</p>
+            <h1 class="hero-name">
+                <span class="line">Matthew</span>
+                <span class="line outline">Goembel</span>
+            </h1>
+            <p class="hero-sub">
+                I'm a <span class="role-cycle" id="roleCycle">Software Engineer</span>
+            </p>
+            <div class="hero-ctas">
+                <a href="#work" class="btn btn-primary">See My Work</a>
+                <a href="https://hypewave.com" target="_blank" class="btn btn-ghost">Hypewave AI →</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-bar"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrap">
+                    <!-- Swap this out for: <img src="assets/images/matty.jpg" alt="Matthew Goembel"> -->
+                    <div class="img-placeholder">
+                        <span>Photo</span>
+                    </div>
+                    <div class="img-accent-border"></div>
+                </div>
+                <div class="about-text">
+                    <p class="label">About</p>
+                    <h2 class="heading">Engineer.<br>Trader.<br>Builder.</h2>
+                    <p class="body-text">
+                        I'm a software engineer, founder, and trader based in the US. I graduated from
+                        <strong>Florida Institute of Technology</strong> with a BS in Software Engineering —
+                        Dean's List, Panther Fund Scholar, Order of the Engineer.
+                    </p>
+                    <p class="body-text">
+                        I founded <strong>Hypewave AI</strong> to build the trading platform I wished existed.
+                        Outside of code, I've spent 3 years staring at charts every single day — and I
+                        compete in the gym at the same level I compete in everything else.
+                    </p>
+                    <div class="about-ctas">
+                        <a href="assets/resume.pdf" class="btn btn-primary btn-sm" target="_blank">Resume ↓</a>
+                        <a href="https://www.linkedin.com/in/matthewgoembel/" class="btn btn-ghost btn-sm" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="section bg-alt" id="what">
+        <div class="container">
+            <p class="label">What I Do</p>
+            <h2 class="heading">Multiple lanes.<br>One standard.</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">⬡</div>
+                    <h3>Software Engineering</h3>
+                    <p>Full-stack development, mobile apps, cloud infrastructure. From React Native to AWS — I build things that work and scale.</p>
+                    <div class="tags">
+                        <span>Python</span><span>TypeScript</span><span>AWS</span><span>React Native</span><span>Firebase</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">◈</div>
+                    <h3>Trading & Markets</h3>
+                    <p>3 years deep. Crypto perps, memecoin alpha, and now prop firm NQ/ES futures with ICT methodology. Every day. No days off.</p>
+                    <div class="tags">
+                        <span>NQ / ES</span><span>ICT Concepts</span><span>Crypto</span><span>Prop Firms</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">◎</div>
+                    <h3>Hypewave AI</h3>
+                    <p>Founder of a trading community and AI platform. Signals, market data aggregation, and daily alpha — building what traders actually need.</p>
+                    <div class="tags">
+                        <span>AI Signals</span><span>Community</span><span>Discord</span><span>App</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">▣</div>
+                    <h3>Content & Brand</h3>
+                    <p>Digital content manager, social strategist, and affiliate partner. I grow brands online — including my own across fitness and trading.</p>
+                    <div class="tags">
+                        <span>Social Media</span><span>SEO</span><span>Analytics</span><span>Brand</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section class="section" id="work">
+        <div class="container">
+            <p class="label">Work</p>
+            <h2 class="heading">Things I've built.</h2>
+            <div class="projects">
+
+                <div class="project">
+                    <div class="project-meta">
+                        <span class="project-year">2025 — Present</span>
+                        <span class="project-type">Founder / Full-Stack</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Hypewave AI</h3>
+                        <p>An AI-powered trading platform and community. Real-time market signals, news aggregation, chart-based AI chat, and a premium Discord for serious traders. Currently expanding into mobile and automated signal generation.</p>
+                        <div class="tags">
+                            <span>React Native</span><span>TypeScript</span><span>Firebase</span><span>OpenAI</span><span>Expo</span>
+                        </div>
+                    </div>
+                    <a href="https://hypewave.com" target="_blank" class="project-link">Visit →</a>
+                </div>
+
+                <div class="project">
+                    <div class="project-meta">
+                        <span class="project-year">2024 — Present</span>
+                        <span class="project-type">Digital Content Manager</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Carolina Cabinet Specialists</h3>
+                        <p>Full digital presence for a family-owned cabinet company. Content strategy, social media growth, website management, and data-driven campaign planning. Increased brand visibility through creative content and analytics.</p>
+                        <div class="tags">
+                            <span>Treepl CMS</span><span>Social Media</span><span>SEO</span><span>Analytics</span>
+                        </div>
+                    </div>
+                    <a href="https://ccs.treepl.co/" target="_blank" class="project-link">Visit →</a>
+                </div>
+
+                <div class="project">
+                    <div class="project-meta">
+                        <span class="project-year">2025</span>
+                        <span class="project-type">Full-Stack / Senior Design</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Cool Cyber Games</h3>
+                        <p>An interactive cybersecurity learning platform with gamified challenges and progression. Built full-stack and presented at the Florida Tech Senior Design Showcase.</p>
+                        <div class="tags">
+                            <span>Full-Stack</span><span>Gamification</span><span>Cybersecurity</span><span>UI/UX</span>
+                        </div>
+                    </div>
+                    <a href="https://coolcybergames.com" target="_blank" class="project-link">Visit →</a>
+                </div>
+
+                <div class="project">
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-type">Contract / QA</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Ubisoft Red Storm</h3>
+                        <p>Contract game testing for one of the world's leading AAA studios. Bug identification, gameplay analysis, and detailed QA reporting.</p>
+                        <div class="tags">
+                            <span>QA Testing</span><span>Game Dev</span><span>Documentation</span>
+                        </div>
+                    </div>
+                    <span class="project-link muted">Under NDA</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRADING -->
+    <section class="section bg-alt trading-section" id="trading">
+        <div class="container">
+            <p class="label">Trading</p>
+            <h2 class="heading">3 years. Every day.<br>No breaks.</h2>
+            <p class="body-text trading-sub">
+                Started March 2023. Crypto perpetual futures, memecoin alpha on DEXs — called several 1000x+
+                plays and profited over $50k. Now I trade NQ and ES futures with ICT methodology through prop firms.
+                I've looked at charts every single day for 3 years straight. It's not a hobby, it's a language.
+            </p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-val"><span class="count" data-target="25">0</span><span class="stat-suffix">+</span></div>
+                    <p>Funded Accounts Passed</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-val">$<span class="count" data-target="35">0</span><span class="stat-suffix">k+</span></div>
+                    <p>In Payouts Taken</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-val">$<span class="count" data-target="50">0</span><span class="stat-suffix">k+</span></div>
+                    <p>Memecoin Profits</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-val"><span class="count" data-target="1000">0</span><span class="stat-suffix">x+</span></div>
+                    <p>Calls Made</p>
+                </div>
+            </div>
+            <div class="instrument-tags">
+                <span>NQ Futures</span>
+                <span>ES Futures</span>
+                <span>BTC Perps</span>
+                <span>ETH Perps</span>
+                <span>SOL / Memes</span>
+                <span>ICT Concepts</span>
+                <span>Prop Firms</span>
+                <span>DEX / Axiom</span>
+                <span>Bullx</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="container">
+            <p class="label">Experience</p>
+            <h2 class="heading">Where I've been.</h2>
+            <div class="timeline">
+
+                <div class="tl-item">
+                    <div class="tl-date">2025 — Present</div>
+                    <div class="tl-body">
+                        <h3>Founder & CEO</h3>
+                        <span class="tl-company">Hypewave AI</span>
+                        <p>Building an AI-powered trading platform and community from zero. Full product, brand, and business.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-date">2024 — Present</div>
+                    <div class="tl-body">
+                        <h3>Digital Content Manager</h3>
+                        <span class="tl-company">Carolina Cabinet Specialists — Cary, NC</span>
+                        <p>Full digital presence — content strategy, social growth, web, and analytics.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-date">2024</div>
+                    <div class="tl-body">
+                        <h3>Game Tester (Contract)</h3>
+                        <span class="tl-company">Red Storm — Ubisoft, Remote</span>
+                        <p>QA testing for a AAA game studio. Bug reporting, gameplay analysis, quality assurance.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-date">2022 — 2025</div>
+                    <div class="tl-body">
+                        <h3>B.S. Software Engineering</h3>
+                        <span class="tl-company">Florida Institute of Technology — Melbourne, FL</span>
+                        <p>Panther Fund Scholar (4 years). Dean's List. Order of the Engineer. Varsity & Club Swim Team. AWS + Google Cloud certified.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-date">2022 — 2024</div>
+                    <div class="tl-body">
+                        <h3>Head Swim Coach</h3>
+                        <span class="tl-company">Lochmere Swim Club — Cary, NC</span>
+                        <p>Led the 2022 & 2024 teams to the Division IV Championship. Coached 50+ athletes seasonally.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="section" id="connect">
+        <div class="container connect-container">
+            <p class="label">Connect</p>
+            <h2 class="heading">Let's talk.</h2>
+            <p class="body-text">Business, collab, trading talk, or just want to link — I'm reachable.</p>
+            <a href="mailto:matthew@hypewaveai.com" class="email-link">matthew@hypewaveai.com</a>
+            <div class="socials">
+                <a href="https://www.instagram.com/matthewgoembel" target="_blank" class="social">Instagram</a>
+                <a href="https://www.instagram.com/goembel_/" target="_blank" class="social">Gym IG</a>
+                <a href="https://www.tiktok.com/@b1gmattyg" target="_blank" class="social">TikTok</a>
+                <a href="https://www.youtube.com/@NotMattyG" target="_blank" class="social">YouTube</a>
+                <a href="https://x.com/thek1ngofsolana" target="_blank" class="social">X / Twitter</a>
+                <a href="https://www.linkedin.com/in/matthewgoembel/" target="_blank" class="social">LinkedIn</a>
+                <a href="https://github.com/matthewgoembel" target="_blank" class="social">GitHub</a>
+                <a href="https://linktr.ee/matthewgoembel" target="_blank" class="social">Linktree</a>
+                <a href="https://discord.gg" target="_blank" class="social">Discord</a>
+            </div>
+            <div class="affiliate-note">
+                <p>Supplement partner: <a href="#" target="_blank">Bucked Up</a> — code <strong>MATTY20G</strong> &nbsp;|&nbsp; Apparel: <a href="#" target="_blank">PumpCo</a> — code <strong>MATTYG</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-logo">MG</span>
+            <span class="footer-mid">© 2026 Matthew Goembel</span>
+            <span class="footer-right">mattyg.com</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
