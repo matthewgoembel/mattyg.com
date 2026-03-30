@@ -660,8 +660,9 @@ strong { color: var(--text); font-weight: 600; }
     border-color: var(--green);
     color: var(--green);
 }
-
-/* REFERRAL TAGS */
+/* ============================================
+ Refferal Tags
+   ============================================ */
 
 .referral-section {
     margin-top: 3rem;
