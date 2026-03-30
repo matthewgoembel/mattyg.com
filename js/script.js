@@ -123,9 +123,9 @@ heroTl
 
 const roles = [
     'Software Engineer',
-    'Prop Trader',
-    'Founder @ Hypewave AI',
-    'Full-Stack Developer',
+    'Trader',
+    'Founder',
+    'Developer',
     'Fitness Model',
     'Content Creator',
 ];
