@@ -125,8 +125,8 @@ const roles = [
     'Trader',
     'Software Engineer',
     'Entrepreneur',
-    'Developer',
-    'Health & Fitness Coach',
+    'Creator',
+    'Fitness Coach',
 ];
 
 let roleIdx = 0;
